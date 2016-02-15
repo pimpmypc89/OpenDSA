@@ -366,3 +366,6 @@ lib/registerbook-min.js: lib/registerbook.js
 
 randy: min
 	python $(CONFIG_SCRIPT) config/randy.json --local
+
+AniSE2: min
+	python $(CONFIG_SCRIPT) config/AniSE2.json --local
