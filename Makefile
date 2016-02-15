@@ -363,3 +363,6 @@ lib/gradebook-min.css: lib/gradebook.css
 lib/registerbook-min.js: lib/registerbook.js
 	@echo 'Minimizing lib/registerbook.js'
 	@$(MINIMIZE) lib/registerbook.js --comments '/^!|@preserve|@license|@cc_on/i' > lib/registerbook-min.js
+
+randy: min
+	python $(CONFIG_SCRIPT) config/randy.json --local
