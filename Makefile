@@ -372,6 +372,9 @@ AniSE2: min
 
 Logan: min
 	python $(CONFIG_SCRIPT) config/loganshuffle.json --local
+
+ani: min
+	python $(CONFIG_SCRIPT) config/ani.json --local
 	
 MapReduce: min
 	python $(CONFIG_SCRIPT) config/MapReduce.json --local
