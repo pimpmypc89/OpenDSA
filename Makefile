@@ -369,6 +369,9 @@ randy: min
 
 AniSE2: min
 	python $(CONFIG_SCRIPT) config/AniSE2.json --local
+
+ani: min
+	python $(CONFIG_SCRIPT) config/ani.json --local
 	
 MapReduce: min
 	python $(CONFIG_SCRIPT) config/MapReduce.json --local

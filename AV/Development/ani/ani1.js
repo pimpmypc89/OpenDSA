@@ -5,24 +5,22 @@ $(document).ready(function () {
 
     JSAV.init();
 
-    var av = new JSAV("AniSE2");
+    var av = new JSAV("ani1");
     var theArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     var arr = av.ds.array(theArray, {indexed: true});
-    av.umsg("We are going to randomize an array. This is done by taking the length of the array and swapping" 
-			+ " elements from the length, subtracting the index until you get to the front of the array." 
-			+ " This creates a randomized array.");
+    av.umsg("We are going to randomize an array. This is done using the shuffle function.");
     // Note: av.displayInit() will not affect the number of slides.
     // All that it will do is affect what you get to see on the
     // initial slide.
     av.displayInit();
     // We are now starting a new slide (#2)
-    
+    av.umsg("...Shuffling", {preserve: true});
 	var i = theArray.length;
 	var temp, randomIndex;
 	while (i !== 0){
 		randomIndex = Math.floor(Math.random() * i);
 		i--;
-		av.umsg("...Shuffling index " + i + ".", {preserve: true});
+		
 		temp = theArray[i];
 		theArray[i] = theArray[randomIndex];
 		theArray[randomIndex] = temp;
@@ -39,5 +37,4 @@ $(document).ready(function () {
     // So, unless you are trying to add slides on-the-fly
     // interactively, you don't want to do this.
     // av.umsg("Text after av.recorded()");
-
 });
