@@ -4,7 +4,7 @@
 .. distributed under an MIT open source license.
 
 .. avmetadata:: 
-   :author: Randy Nimmer
+   :author: Randy Nimmer, Logan Trost
 
 ============================================================
 Illustrate a simple slide show in an OpenDSA learning module
@@ -31,6 +31,7 @@ True   False  True
 False  True   True
 True   True   True
 =====  =====  ======
+.. avembed:: AV/Development/cs342_uwosh2.html ss
 
 
 .. odsascript:: AV/Development/MapReduce/1.js
