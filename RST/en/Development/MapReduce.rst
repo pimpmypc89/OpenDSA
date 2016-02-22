@@ -20,18 +20,6 @@ learning module.
 
 .. inlineav:: 1 ss
    :output: show
-   
-=====  =====  ======
-   Inputs     Output
-------------  ------
-  A      B    A or B
-=====  =====  ======
-False  False  False
-True   False  True
-False  True   True
-True   True   True
-=====  =====  ======
-.. avembed:: AV/Development/cs342_uwosh2.html ss
 
 
 .. odsascript:: AV/Development/MapReduce/1.js
