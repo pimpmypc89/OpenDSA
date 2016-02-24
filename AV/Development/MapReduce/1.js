@@ -8,7 +8,8 @@ $(document).ready(function () {
     var av = new JSAV("1");
     
     var book = ["Ch 1", "Ch 2", "Ch 3", "Ch 4"];
-    var bookav = av.ds.array(book, {"layout": "vertical"});
+    var bookav = av.ds.array(book, {layout: "bar"});
+    bookav.css( true, {"width":"200px", "height":"33px"} );
     bookav.css({"font-size":"8pt"});
     av.umsg("Chapters before mapping:");
     // Note: av.displayInit() will not affect the number of slides.
