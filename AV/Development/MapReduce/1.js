@@ -21,8 +21,6 @@ $(document).ready(function () {
     av.displayInit();
 	//Slide 2
     av.umsg("We start with a simple book that has four chapters in it.");
-	var book = ["Ch 1", "Ch 2", "Ch 3", "Ch 4"];
-    var bookav = av.ds.array(book, {"layout": "vertical"});
 	av.step();
     // Slide 3
 	av.umsg("We start by splitting the book into each of its separate chapters to be mapped.");
@@ -32,10 +30,14 @@ $(document).ready(function () {
 	var ch3 = ["Ch 3"];
     var ch4 = ["Ch 4"];
 
-    var ch1av = av.ds.array(ch1, {});
-    var ch2av = av.ds.array(ch2, {});
-	var ch3av = av.ds.array(ch3, {});
-    var ch4av = av.ds.array(ch4, {});
+    var ch1av = av.ds.array(ch1, {layout:"bar"});
+    var ch2av = av.ds.array(ch2, {layout:"bar"});
+	var ch3av = av.ds.array(ch3, {layout:"bar"});
+    var ch4av = av.ds.array(ch4, {layout:"bar"});
+    ch1av.css(true,{"height":"30px","width":"200px"});
+    ch2av.css(true,{"height":"30px","width":"200px"});
+    ch3av.css(true,{"height":"30px","width":"200px"});
+    ch4av.css(true,{"height":"30px","width":"200px"});
 	av.step();
 	//Slide 4
     av.umsg("Each chapter is mapped to a processing node.");
@@ -49,10 +51,14 @@ $(document).ready(function () {
 	var ch3 = ["The", "cat", "and", "the", "dog"];
     var ch4 = ["The", "big", "fat", "cat", "sat"];	
 
-    var ch1av = av.ds.array(ch1, {});
-    var ch2av = av.ds.array(ch2, {});
-	var ch3av = av.ds.array(ch3, {});
-    var ch4av = av.ds.array(ch4, {});
+    var ch1av = av.ds.array(ch1, {layout:"bar"});
+    var ch2av = av.ds.array(ch2, {layout:"bar"});
+	var ch3av = av.ds.array(ch3, {layout:"bar"});
+    var ch4av = av.ds.array(ch4, {layout:"bar"});
+    ch1av.css(true,{"height":"30px","width":"200px"});
+    ch2av.css(true,{"height":"30px","width":"200px"});
+    ch3av.css(true,{"height":"30px","width":"200px"});
+    ch4av.css(true,{"height":"30px","width":"200px"});
     av.step();
 	//Slide 5
     av.umsg("The sections are then sorted by each section by 'mapping' them.");
@@ -66,10 +72,14 @@ $(document).ready(function () {
 	var ch3 = ["The", "cat", "and", "the", "dog"];
     var ch4 = ["The", "big", "fat", "cat", "sat"];	
 
-    var ch1av = av.ds.array(ch1, {});
-    var ch2av = av.ds.array(ch2, {});
-	var ch3av = av.ds.array(ch3, {});
-    var ch4av = av.ds.array(ch4, {});
+    var ch1av = av.ds.array(ch1, {layout:"bar"});
+    var ch2av = av.ds.array(ch2, {layout:"bar"});
+	var ch3av = av.ds.array(ch3, {layout:"bar"});
+    var ch4av = av.ds.array(ch4, {layout:"bar"});
+    ch1av.css(true,{"height":"30px","width":"200px"});
+    ch2av.css(true,{"height":"30px","width":"200px"});
+    ch3av.css(true,{"height":"30px","width":"200px"});
+    ch4av.css(true,{"height":"30px","width":"200px"});
     av.step();	
     // Final Slide
     av.umsg("Swapping now complete.");
