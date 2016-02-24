@@ -378,3 +378,6 @@ ani: min
 	
 MapReduce: min
 	python $(CONFIG_SCRIPT) config/MapReduce.json --local
+
+AniExcercise: min
+	python $(CONFIG_SCRIPT) config/AniExcercise.json --local
