@@ -47,9 +47,9 @@ $(document).ready(function () {
 	ch4av.hide();
 
     var ch1 = ["The", "cat", "in", "the", "hat"];
-    var ch2 = ["The", "dog", "with", "the", "log"];
+    var ch2 = ["The", "dog", "with", "the", "dog"];
 	var ch3 = ["The", "cat", "and", "the", "dog"];
-    var ch4 = ["The", "big", "fat", "cat", "sat"];	
+    var ch4 = ["The", "big", "big", "cat", "sat"];	
 
     var ch1av = av.ds.array(ch1, {layout:"bar"});
     var ch2av = av.ds.array(ch2, {layout:"bar"});
@@ -67,10 +67,10 @@ $(document).ready(function () {
 	ch3av.hide();
 	ch4av.hide();
 
-    var ch1 = ["The", "1", "cat", "1", "in", "1", "the", "1", "hat", "1"];
-    var ch2 = ["The", "1", "dog", "1", "with", "1", "the", "1", "log", "1"];
-	var ch3 = ["The", "cat", "and", "the", "dog"];
-    var ch4 = ["The", "big", "fat", "cat", "sat"];	
+    var ch1 = ["cat : 1", "hat : 1", "in : 1", "the : 1", "The : 1"];
+    var ch2 = ["dog : 2", "the : 1", "The : 1", "with : 1"];
+	var ch3 = ["and : 1", "cat : 1", "dog : 1", "the : 1", "The : 1"];
+    var ch4 = ["big : 2", "cat : 1", "sat : 1", "The : 1"];	
 
     var ch1av = av.ds.array(ch1, {layout:"bar"});
     var ch2av = av.ds.array(ch2, {layout:"bar"});
@@ -81,6 +81,8 @@ $(document).ready(function () {
     ch3av.css(true,{"height":"30px","width":"200px"});
     ch4av.css(true,{"height":"30px","width":"200px"});
     av.step();	
+	//Slide 6
+	
     // Final Slide
     av.umsg("Swapping now complete.");
     av.recorded();
