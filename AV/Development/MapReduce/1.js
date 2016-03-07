@@ -10,7 +10,6 @@ $(document).ready(function () {
     var book = ["Ch 1", "Ch 2", "Ch 3", "Ch 4"];
     var bookav = av.ds.array(book, {layout: "bar"});
     bookav.css( true, {"width":"200px", "height":"33px"} );
-    bookav.css({"font-size":"8pt"});
     
     av.umsg("This slideshow will demonstrate the use of the MapReduce through concordance." 
 			+ " This concordance will be the frequency in which a word has been used within" 
@@ -34,10 +33,10 @@ $(document).ready(function () {
     var ch2av = av.ds.array(ch2, {layout:"bar"});
 	var ch3av = av.ds.array(ch3, {layout:"bar"});
     var ch4av = av.ds.array(ch4, {layout:"bar"});
-    ch1av.css(true,{"height":"30px","width":"200px"});
-    ch2av.css(true,{"height":"30px","width":"200px"});
-    ch3av.css(true,{"height":"30px","width":"200px"});
-    ch4av.css(true,{"height":"30px","width":"200px"});
+    ch1av.css(true,{"height":"30px","width":"150px"});
+    ch2av.css(true,{"height":"30px","width":"150px"});
+    ch3av.css(true,{"height":"30px","width":"150px"});
+    ch4av.css(true,{"height":"30px","width":"150px"});
 	av.step();
 	//Slide 4
     av.umsg("Each chapter is mapped to a processing node.");
@@ -55,10 +54,10 @@ $(document).ready(function () {
     var ch2av = av.ds.array(ch2, {layout:"bar"});
 	var ch3av = av.ds.array(ch3, {layout:"bar"});
     var ch4av = av.ds.array(ch4, {layout:"bar"});
-    ch1av.css(true,{"height":"30px","width":"200px"});
-    ch2av.css(true,{"height":"30px","width":"200px"});
-    ch3av.css(true,{"height":"30px","width":"200px"});
-    ch4av.css(true,{"height":"30px","width":"200px"});
+    ch1av.css(true,{"height":"30px","width":"150px"});
+    ch2av.css(true,{"height":"30px","width":"150px"});
+    ch3av.css(true,{"height":"30px","width":"150px"});
+    ch4av.css(true,{"height":"30px","width":"150px"});
     av.step();
 	//Slide 5
     av.umsg("The sections are then sorted by each section by 'mapping' them.");
@@ -76,15 +75,25 @@ $(document).ready(function () {
     var ch2av = av.ds.array(ch2, {layout:"bar"});
 	var ch3av = av.ds.array(ch3, {layout:"bar"});
     var ch4av = av.ds.array(ch4, {layout:"bar"});
-    ch1av.css(true,{"height":"30px","width":"200px"});
-    ch2av.css(true,{"height":"30px","width":"200px"});
-    ch3av.css(true,{"height":"30px","width":"200px"});
-    ch4av.css(true,{"height":"30px","width":"200px"});
+    ch1av.css(true,{"height":"30px","width":"150px"});
+    ch2av.css(true,{"height":"30px","width":"150px"});
+    ch3av.css(true,{"height":"30px","width":"150px"});
+    ch4av.css(true,{"height":"30px","width":"150px"});
     av.step();	
 	//Slide 6
-	
+	 av.umsg("Finally the sections are then sorted together to form a final concordance.");
+	ch1av.hide();
+	ch2av.hide();
+	ch3av.hide();
+	ch4av.hide();
+
+    var ch1 = ["and : 1", "big : 2", "cat : 3", "dog : 3", "hat : 1", "in : 1", "sat : 1", "the : 3", "The : 4", "with : 1"];
+
+    var ch1av = av.ds.array(ch1, {layout:"bar"});
+    ch1av.css(true,{"height":"30px","width":"150px"});
+    av.step();	
     // Final Slide
-    av.umsg("Swapping now complete.");
+    av.umsg("The MapReduce function has now completed the concordance.");
     av.recorded();
     // If you add av.umsg after av.recorded, it will add new slides in
     // ways that you probably do not expect and probably cannot
