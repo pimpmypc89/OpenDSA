@@ -18,8 +18,9 @@ function runit() {
 	theArray = [];
 	for (i = 0; i < 12; i++) {
 	    theArray.push(Math.trunc(50 * Math.random() + 10));
-	}
+		}
     }
+	
 
     av = new JSAV($('.avcontainer'));
 
