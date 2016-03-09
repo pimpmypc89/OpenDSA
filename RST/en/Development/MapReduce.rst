@@ -10,7 +10,11 @@
 Introduction
 ============================================================
 
-Testing Testing 123
+MapReduce is a program that allows users to process data in parallel. It is a framework from hadoop that is very widely known and has been around for almost a decade. Commonly used with large amounts of data, MapReduce's ability to work in parallel allows the optimization of problems. This program is more efficient in situations with multiple threads with larger amounts of data, however it can also be used to solve simple small solutions as well.
+
+The process of MapReduce can be separated into two basic phases: mapping and reducing. These phases are always performed in the same order and create a simple path to follow. First, the input data is mapped using a map function. This is done to create key-value pairs. After this task is performed, the key-value pairs are aggregated together in the reduce step. By reducing the data, the result can be formed.
+
+MapReduce 
 
 ============================================================
 MapReduce Concordance Example
@@ -18,7 +22,7 @@ MapReduce Concordance Example
 Concordance Introduction
 -----------------------
 
-The following slideshow demonstrates how the mapReduce algorithm can be used to create a concordance. MapReduce is a program that takes components, separates them into smaller groups (the map step), redistributes the data based on what the user asks for (the shuffling step), then processes each group of data in parallel (the reducing step). This program is more efficient in situations with multiple threads, and is used to optimize them.
+The following slideshow demonstrates how the mapReduce algorithm can be used to create a concordance. 
 
 
 Simple Slideshow Example
@@ -46,3 +50,8 @@ Excercises
 .. avembed:: Exercises/Development/AniExcercise2.html ka
 
 .. odsascript:: Excercises/Development/AniExcercise1.js
+
+Sources
+-----------------------
+http://www.dummies.com/how-to/content/the-importance-of-mapreduce-in-hadoop.html
+https://www.youtube.com/watch?v=8wjvMyc01QY
