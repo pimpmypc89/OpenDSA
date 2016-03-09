@@ -11,14 +11,13 @@ function runit() {
     // Validate the array values a user enters or generate an array of
     // random numbers < 100 of the size selected in the dropdown list
     // if none are provided
-    var theArray = ODSA.AV.processArrayValues(100);
-
+    //var theArray = ODSA.AV.processArrayValues(100);
+    var theArray;
     // If theArray wasn't filled properly, we generate our own 
     if (!theArray) {
-	theArray = [];
-	for (i = 0; i < 12; i++) {
-	    theArray.push(Math.trunc(50 * Math.random() + 10));
-	}
+    
+	    theArray = $("#arrayValues").val().split(",");
+	
     }
 
     av = new JSAV($('.avcontainer'));

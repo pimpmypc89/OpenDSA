@@ -47,11 +47,15 @@ Interactive Example
 
 Excercises
 -----------------------
-.. avembed:: Exercises/Development/AniExcercise2.html ka
+.. avembed:: Exercises/Development/MapReduceEx.html ka
 
+<<<<<<< HEAD
 .. odsascript:: Excercises/Development/AniExcercise1.js
 
 Sources
 -----------------------
 http://www.dummies.com/how-to/content/the-importance-of-mapreduce-in-hadoop.html
 https://www.youtube.com/watch?v=8wjvMyc01QY
+=======
+.. odsascript:: Excercises/Development/MapReduceEx.js
+>>>>>>> 294018875cca57d5ef92a0a3c47d740c4c7b3431
