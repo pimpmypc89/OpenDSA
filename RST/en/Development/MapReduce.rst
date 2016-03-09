@@ -43,6 +43,6 @@ Interactive Example
 
 Excercises
 -----------------------
-.. avembed:: Exercises/Development/MapReduceEX.html ka
+.. avembed:: Exercises/Development/AniExcercise2.html ka
 
-.. odsascript:: Excercises/Development/MapReduceEX.js
+.. odsascript:: Excercises/Development/AniExcercise1.js
