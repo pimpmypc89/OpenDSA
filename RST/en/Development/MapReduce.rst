@@ -40,5 +40,9 @@ Interactive Example
 .. odsascript:: AV/Development/cs342_uwosh2.js
 
 
+
 Excercises
 -----------------------
+.. avembed:: Exercises/Development/MapReduceEX.html ka
+
+.. odsascript:: Excercises/Development/MapReduceEX.js

@@ -27,6 +27,12 @@
         "long_name": "Simple Example of Using a Slide Show in a Book Module",
         "sections": {}
       }
+    },
+   "A Khan Academy Exericse with JSAV object": {
+			"MapReduceEX": {
+			    "long_name": "KA Exercise Example with JSAV object"
+			    
+	}
     }
   }
 }
