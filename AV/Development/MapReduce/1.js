@@ -11,9 +11,7 @@ $(document).ready(function () {
     var bookav = av.ds.array(book, {layout: "bar"});
     bookav.css( true, {"width":"200px", "height":"33px"} );
     
-    av.umsg("This slideshow will demonstrate the use of the MapReduce through concordance." 
-			+ " This concordance will be the frequency in which a word has been used within" 
-			+ " a book.");
+    av.umsg("This slideshow will demonstrate the use of the MapReduce through concordance.");
     // Note: av.displayInit() will not affect the number of slides.
     // All that it will do is affect what you get to see on the
     // initial slide.
@@ -22,7 +20,8 @@ $(document).ready(function () {
     av.umsg("We start with a simple book that has four chapters in it.");
 	av.step();
     // Slide 3
-	av.umsg("We start by splitting the book into each of its separate chapters to be mapped.");
+	av.umsg("The first step of MapReduce is to separate the book into each of its separate chapters. " 
+				+ "This is so the MapReduce function can work on separate parts at the same time.");
 	bookav.hide();	
 	var ch1 = ["Ch 1"];
     var ch2 = ["Ch 2"];
@@ -39,7 +38,7 @@ $(document).ready(function () {
     ch4av.css(true,{"height":"30px","width":"150px"});
 	av.step();
 	//Slide 4
-    av.umsg("Each chapter is mapped to a processing node.");
+    av.umsg("Now that the chapters are separated out, we map each chapter to get the frequency of the words.");
 	ch1av.hide();
 	ch2av.hide();
 	ch3av.hide();
@@ -60,7 +59,7 @@ $(document).ready(function () {
     ch4av.css(true,{"height":"30px","width":"150px"});
     av.step();
 	//Slide 5
-    av.umsg("The sections are then sorted by each section by 'mapping' them.");
+    av.umsg("The sections are now sorted based on our criteria.");
 	ch1av.hide();
 	ch2av.hide();
 	ch3av.hide();
@@ -81,7 +80,8 @@ $(document).ready(function () {
     ch4av.css(true,{"height":"30px","width":"150px"});
     av.step();	
 	//Slide 6
-	 av.umsg("Finally the sections are then sorted together to form a final concordance.");
+	 av.umsg("To get our concordance result, we then take the separated processed and 'reduce' them back together." 
+				+ " The separate chapter frequencies are added together to get the total frequency for each word.");
 	ch1av.hide();
 	ch2av.hide();
 	ch3av.hide();
@@ -93,7 +93,7 @@ $(document).ready(function () {
     ch1av.css(true,{"height":"30px","width":"150px"});
     av.step();	
     // Final Slide
-    av.umsg("The MapReduce function has now completed the concordance.");
+    av.umsg("The MapReduce function has now reduced the separate frequencies to give us the final concordance.");
     av.recorded();
     // If you add av.umsg after av.recorded, it will add new slides in
     // ways that you probably do not expect and probably cannot
