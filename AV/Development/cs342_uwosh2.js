@@ -12,13 +12,14 @@ function runit() {
     // random numbers < 100 of the size selected in the dropdown list
     // if none are provided
     //var theArray = ODSA.AV.processArrayValues(100);
-    var ch1;
+    var chpts, ch1, ch2, ch3;
     // If theArray wasn't filled properly, we generate our own 
-    if (!ch1) {
+    if (!chpts) {
     
-	    ch1 = $("#ch1").val().split(" ");
-	    ch2 = $("#ch2").val().split(" ");
-	    ch3 = $("#ch3").val().split(" ");
+        chpts = $("#ch1").val().split(", ");
+	    ch1 = chpts[0].split(" ");
+	    ch2 = chpts[1].split(" ");
+	    ch3 = chpts[2].split(" ");
 	
     }
 
@@ -39,7 +40,7 @@ function runit() {
     av.umsg("Step 2", {preserve: true});
     av.step();
     // We are now starting a new slide (#3)
-    av.umsg("Text after av.step()");
+    av.umsg("");
     av.recorded();
     // If you add av.umsg after av.recorded, it will add new slides in
     // ways that you probably do not expect and probably cannot
