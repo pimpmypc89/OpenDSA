@@ -12,25 +12,31 @@ function runit() {
     // random numbers < 100 of the size selected in the dropdown list
     // if none are provided
     //var theArray = ODSA.AV.processArrayValues(100);
-    var theArray;
+    var ch1;
     // If theArray wasn't filled properly, we generate our own 
-    if (!theArray) {
+    if (!ch1) {
     
-	    theArray = $("#arrayValues").val().split(",");
+	    ch1 = $("#ch1").val().split(" ");
+	    ch2 = $("#ch2").val().split(" ");
+	    ch3 = $("#ch3").val().split(" ");
 	
     }
 
     av = new JSAV($('.avcontainer'));
 
-    var arr = av.ds.array(theArray, {indexed: true});
-    av.umsg("Text before displayInit()");
+    var arr1 = av.ds.array(ch1, {layout:"bar"});
+    arr1.css(true,{"height":"30px","width":"150px"});
+    var arr2 = av.ds.array(ch2, {layout:"bar"});
+    arr2.css(true,{"height":"30px","width":"150px"});
+    var arr3 = av.ds.array(ch3, {layout:"bar"});
+    arr3.css(true,{"height":"30px","width":"150px"});
+    av.umsg("Breakdown of what you entered:");
     // Note: av.displayInit() will not affect the number of slides.
     // All that it will do is affect what you get to see on the
     // initial slide.
     av.displayInit();
     // We are now starting a new slide (#2)
-    av.umsg("... and text after displayInit()", {preserve: true});
-    arr.swap(3,7);
+    av.umsg("Step 2", {preserve: true});
     av.step();
     // We are now starting a new slide (#3)
     av.umsg("Text after av.step()");
@@ -48,7 +54,7 @@ function runit() {
 
 
 function about() {
-   alert("Simple array visualization");
+   alert("This module will visualize a MapReduce over the words you provide.");
 }
   
 function help() {
