@@ -14,7 +14,6 @@ MapReduce is a programming model that allows users to process data in parallel. 
 
 The process of MapReduce can be separated into two basic phases: mapping and reducing. These phases are always performed in the same order and create a simple path to follow. First, the input data is mapped using a map function. This is done to create key-value pairs. After this task is performed, the key-value pairs are aggregated together in the reduce step. By reducing the data, the result can be formed.
 
-MapReduce 
 
 ============================================================
 MapReduce Concordance Example
@@ -22,7 +21,7 @@ MapReduce Concordance Example
 Concordance Introduction
 -----------------------
 
-The following slideshow demonstrates how the mapReduce algorithm can be used to create a concordance. In this example we have a book with multiple chapters which we wish to get the frequency each word is used.
+The following slideshow demonstrates how the mapReduce algorithm can be used to create a concordance. A concordance is the alphabetical list of all the words in a book/text. In this example we get both the concordance and the frequency in which each word is printed through the process of MapReduce. To help visually understand what MapReduce does, we have broken it up into individual steps.
 
 
 Simple Slideshow Example
