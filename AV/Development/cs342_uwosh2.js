@@ -17,7 +17,11 @@ function runit() {
     // If theArray wasn't filled properly, we generate our own 
     if (!chptstrs) {
     
-        chptstrs = $("#ch1").val().split(", ");
+        if ( $("#ch1").val() == "" )
+            chptstrs = "the cat in the hat, the dog in the hat, the bat in the car".split(", ");
+        else
+            chptstrs = $("#ch1").val().split(", ");
+
         for ( var i = 0; i < chptstrs.length; i++ )
         {
             chpt = chptstrs[i].split(" ");
