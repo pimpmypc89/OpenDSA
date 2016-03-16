@@ -12,35 +12,64 @@ function runit() {
     // random numbers < 100 of the size selected in the dropdown list
     // if none are provided
     //var theArray = ODSA.AV.processArrayValues(100);
-    var chpts, ch1, ch2, ch3;
+    var chptstrs, chpts, chpt;
+    chpts = [];
     // If theArray wasn't filled properly, we generate our own 
-    if (!chpts) {
+    if (!chptstrs) {
     
-        chpts = $("#ch1").val().split(", ");
-	    ch1 = chpts[0].split(" ");
-	    ch2 = chpts[1].split(" ");
-	    ch3 = chpts[2].split(" ");
+        chptstrs = $("#ch1").val().split(", ");
+        for ( var i = 0; i < chptstrs.length; i++ )
+        {
+            chpt = chptstrs[i].split(" ");
+            chpts.push( chpt );
+        }
 	
     }
 
     av = new JSAV($('.avcontainer'));
 
-    var arr1 = av.ds.array(ch1, {layout:"bar"});
-    arr1.css(true,{"height":"30px","width":"150px"});
-    var arr2 = av.ds.array(ch2, {layout:"bar"});
-    arr2.css(true,{"height":"30px","width":"150px"});
-    var arr3 = av.ds.array(ch3, {layout:"bar"});
-    arr3.css(true,{"height":"30px","width":"150px"});
-    av.umsg("Breakdown of what you entered:");
+    av.umsg("Breakdown of what you entered:", {preserve: false});
+    //create the array visualizations using entered chapter data.
+    var chptavs = createavs( chpts, av );
+    
     // Note: av.displayInit() will not affect the number of slides.
     // All that it will do is affect what you get to see on the
     // initial slide.
     av.displayInit();
     // We are now starting a new slide (#2)
-    av.umsg("Step 2", {preserve: true});
+    av.umsg("Each chapter is sorted:", {preserve: false});
+    hideavs( chptavs );
+    for ( var i = 0; i < chpts.length; i++ )
+    {
+        chpts[i].sort();
+    }
+    chptavs = createavs( chpts, av );
     av.step();
     // We are now starting a new slide (#3)
-    av.umsg("");
+    av.umsg("Concordances are generated:");
+    var concs = [];
+    for ( var i = 0; i < chpts.length; i++ )
+    {
+        concs.push( concordance(chpts[i]) );
+    }
+    hideavs( chptavs );
+    chptavs = createavs( concs, av );
+    
+    av.step();
+    
+    av.umsg("Then the concordances are reduced into a single concordance for the book:");
+    var booka = [];
+    for ( var i = 0; i < chpts.length; i++ )
+    {
+        booka.concat( chpts[i] );
+    }
+    booka.sort();
+    var bookc = concordance( booka );
+    alert( bookc );
+    hideavs( chptavs );
+    var conav = av.ds.array(bookc, {layout:"bar"});
+    conav.css(true,{"height":"30px","width":"150px"});
+    
     av.recorded();
     // If you add av.umsg after av.recorded, it will add new slides in
     // ways that you probably do not expect and probably cannot
@@ -52,7 +81,45 @@ function runit() {
 
 }
 
+function createavs( chpts, av )
+{
+    var chavs = [];
+    for ( var i = 0; i < chpts.length; i++ )
+    {
+        var chav = av.ds.array(chpts[i], {layout:"bar"});
+        chav.css(true,{"height":"30px","width":"150px"});
+        chavs.push( chav );
+    }
+    return chavs;
+}
 
+function hideavs( chptavs )
+{
+    for ( var i = 0; i < chptavs.length; i++ )
+    {
+        chptavs[i].hide();
+    }
+}
+
+function concordance(ch1)
+{
+    var count = 0;
+    var ch1c = [];
+    for ( var i = 0; i < ch1.length; )
+    {
+        for ( var j = i; j < ch1.length; j++ )
+        {
+            if ( ch1[i] == ch1[j] )
+                count++;
+            else
+                break;
+        }
+        ch1c.push( ch1[i] + " = " + count );
+        i += count;
+        count = 0;
+    }
+    return ch1c;
+} 
 
 function about() {
    alert("This module will visualize a MapReduce over the words you provide.");

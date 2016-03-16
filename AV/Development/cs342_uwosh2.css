@@ -11,3 +11,7 @@
 .jsavline{
   height: 50px;
 }
+
+.jsavvalue{
+  height: 36px !important;
+}
