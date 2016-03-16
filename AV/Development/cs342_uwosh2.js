@@ -126,7 +126,8 @@ function about() {
   
 function help() {
    alert("Enter the words you would like to see made into a concorcance in the input box." 
-				+ "	EX: the cat in the hat is fat");
+				+ "	If you want to make multiple chapters, separate them with commas."
+				+ " EX: The cat in the hat, The cat that has a hat");
 }
   
 // Initialize the arraysize dropdown list
