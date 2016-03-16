@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-require="math MapReduceEx">
   <head>
-    <title>Pick the largest using fill-in-the-blank</title>
+    <title>Take the role of the reducing worker</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js"></script>
     <script src="../../khan-exercises/local-only/main.js" ></script>
   </head>
@@ -9,17 +9,18 @@
   <body data-height="650" data-width="950">
     <div class="exercise">
       <div class="vars">
-        <var id="arrSize">KhanUtil.randRange(4, 11)</var>
+        <var id="arrSize">KhanUtil.randRange(6, 12)</var>
 	<var id="lastIndex">arrSize - 1</var>
         <var id="arrValues">MapReduceEx.initArr(arrSize)</var>
         <var id="theAnswer">MapReduceEx.maxValue()</var>
       </div>
       <div class="problems">
         <div id="MapReduceExp">
-          <p class="question">What is the largest value in this list of numbers? </p>
+          <p class="question">After the worker unit runs the mapping, do the reduce step. What is the most common appearing word? </p>
 	  <pre><var>arrValues</var></pre>
           <p class="solution" data-type="text"><var>theAnswer</var></p>
           <div class="hints">
+	    <p>Choose something between 0 and index <var>lastIndex</var> </p>
             <p>Choose something between 0 and index <var>lastIndex</var> </p>
             <p>This problem is really too easy for a second hint</p>
           </div>
