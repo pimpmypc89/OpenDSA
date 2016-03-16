@@ -9,20 +9,20 @@
   <body data-height="650" data-width="950">
     <div class="exercise">
       <div class="vars">
-        <var id="arrSize">KhanUtil.randRange(6, 12)</var>
+        <var id="arrSize">KhanUtil.randRange(6, 15)</var>
 	<var id="lastIndex">arrSize - 1</var>
         <var id="arrValues">MapReduceEx.initArr(arrSize)</var>
         <var id="theAnswer">MapReduceEx.maxValue()</var>
       </div>
       <div class="problems">
         <div id="MapReduceExp">
-          <p class="question">After the worker unit runs the mapping, do the reduce step. What is the most common appearing word? </p>
+          <p class="question">This is a map reduce function after mapping. Complete the reduce step and answer this question: What is the most common appearing word in this concordance? </p>
 	  <pre><var>arrValues</var></pre>
           <p class="solution" data-type="text"><var>theAnswer</var></p>
           <div class="hints">
-	    <p>Choose something between 0 and index <var>lastIndex</var> </p>
-            <p>Choose something between 0 and index <var>lastIndex</var> </p>
-            <p>This problem is really too easy for a second hint</p>
+	    <p>Aggregate all the words that are the same to get counts of each</p>
+            <p>Choose the word that has the highest count </p>
+            <p>Review the slides above</p>
           </div>
         </div>
       </div>
