@@ -93,7 +93,7 @@ $(document).ready(function () {
     ch1av.css(true,{"height":"30px","width":"150px"});
     av.step();	
     // Final Slide
-    av.umsg("The MapReduce function has now reduced the separate frequencies to give us the final concordance.");
+    av.umsg("The MapReduce function has now mapped and reduced our book down to its concordance to give us our final result.");
     av.recorded();
     // If you add av.umsg after av.recorded, it will add new slides in
     // ways that you probably do not expect and probably cannot

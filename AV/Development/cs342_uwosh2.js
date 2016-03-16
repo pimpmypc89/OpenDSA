@@ -122,11 +122,12 @@ function concordance(ch1)
 } 
 
 function about() {
-   alert("This module will visualize a MapReduce over the words you provide.");
+   alert("This module allows you to create your own concordance by adding a sentence inside the input box. When hitting submit, the slideshow will take you through the MapReduce function.");
 }
   
 function help() {
-   alert("Help for simple array visualization");
+   alert("Enter the words you would like to see made into a concorcance in the input box." 
+				+ "	EX: the cat in the hat is fat");
 }
   
 // Initialize the arraysize dropdown list

@@ -53,4 +53,5 @@ Excercises
 Sources
 -----------------------
 http://www.dummies.com/how-to/content/the-importance-of-mapreduce-in-hadoop.html
+
 https://www.youtube.com/watch?v=8wjvMyc01QY
