@@ -61,11 +61,10 @@ function runit() {
     var booka = [];
     for ( var i = 0; i < chpts.length; i++ )
     {
-        booka.concat( chpts[i] );
+        booka = booka.concat( chpts[i] );
     }
     booka.sort();
     var bookc = concordance( booka );
-    alert( bookc );
     hideavs( chptavs );
     var conav = av.ds.array(bookc, {layout:"bar"});
     conav.css(true,{"height":"30px","width":"150px"});
