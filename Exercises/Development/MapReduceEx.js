@@ -8,27 +8,26 @@
       
     // Initialise the exercise
       initArr: function(arr_size) {
-	  var phrase3 = "the cat in the hat is very fat and it sat on a bat and now it is on the mat"
-	  var phrase2 = "my saab has stopped running and the engine is now smoking from a fire that is bad"
-	  var phrase = "a brown dog jumped over the white dog who caught a frisbie after chasing the cat"
-	  var phrase;
+	  var phrase3 = "the cat in the hat is very fat and it sat on a bat and now it is on the mat with a rat under his pat"
+	  var phrase2 = "my saab has stopped running and the engine is now smoking from a fire that is bad for insurance"
+	  var phrase1 = "a brown dog jumped over the white dog who caught a frisbie after chasing the cat under a bird"
+	  var phrase = phrase1;
 	  var quickpick = Math.random();
 	  if(quickpick <= 0.25)
 	      phrase = phrase2;
 	  if(quickpick >= 0.6)
 	      phrase = phrase3;
 	  var phrase_array = phrase.split(" ");
-	  var i;
 	  var next_val;
-	  var array_str;
+	  var array_str = " ";
 	  my_array = [];
-	  for (i = 0; i < arr_size; i++) {
+	  for (var i = 0; i < arr_size; i++) {
 	      next_val = phrase_array[Math.floor(Math.random() * (arr_size - 0 + 1)) + 0];
 	      my_array.push(next_val);
 	  }
-	  var modeMap = {},
-          maxElements = [],
-          maxCount = 1;
+	  var modeMap = {};
+          var maxElements = [];
+          var maxCount = 1;
 
     	  for(var i = 0; i < my_array.length; i++)
     	  {
@@ -58,12 +57,41 @@
 	  }
 	  else
 	      frequent = maxElements[0];
-	  array_str = "[" + my_array[0] + " : 1] <br>";
-	  for (i = 1; i < arr_size; i++) {
-	      array_str = array_str + "[" + my_array[i] + " : 1] <br>";
+	
+	  var my_array2 = [];
+	  var numToSplit = my_array.length/2;
+	  for(var s = 0; s < numToSplit; s++)
+	  {
+	      my_array2.push(my_array.pop());
 	  }
+	  var inputArray = [];
+	  inputArray.push(my_array);
+	  inputArray.push(my_array2);
+	  for(var j = 0; j < inputArray.length; j++)
+	  {
+	      var their_array = inputArray[j];
+	      var keys = [];
+	      var cMap = {};
+	      for(var k = 0; k < their_array.length; k++)
+	      {
+	          var element = their_array[k];
+	          if(cMap[element] == null)
+	          {
+	              cMap[element] = 1;
+	 	      keys.push(element);
+	          }
+	          else
+		      cMap[element]++;
+	      }
+	      for (var i = 0; i < keys.length; i++) {
+	          array_str = array_str + "[" + keys[i] + " : " + cMap[keys[i]] +"] <br> ";
+	      }
+		  array_str = array_str + "<br> ";
+	  }
+	  
 	  return array_str;
       },
+
       
       maxValue: function() {
 	  return frequent;
